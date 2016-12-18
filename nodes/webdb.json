@@ -1,0 +1,19 @@
+{
+  "host": {
+    "ip": "192.168.33.10"
+  },
+  "nginx": {
+    "port": 8080
+  },
+  "run_list": [
+    "yum-epel",
+    "recipe[dstat]",
+    "recipe[mysql]",
+    "recipe[apache]",
+    "recipe[nginx]",
+    "recipe[mongodb]"
+  ],
+  "automatic": {
+    "ipaddress": "webdb"
+  }
+}
